@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <LangVersion>10</LangVersion>
+    <PackageId>SendFlit</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>SendFlit</Authors>
+    <Company>SendFlit</Company>
+    <Description>The official SendFlit SDK for .NET — transactional email API for applications and AI agents</Description>
+    <PackageTags>sendflit;email;transactional;api;agents</PackageTags>
+    <PackageProjectUrl>https://sendflit.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Sendflit/sendflit-dotnet</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+</Project>
