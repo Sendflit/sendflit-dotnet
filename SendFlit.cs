@@ -214,11 +214,8 @@ public class Client : IDisposable
     /// <summary>Verify an X-Sendflit-Signature header against the raw body.</summary>
     public static bool VerifyWebhookSignature(string secret, byte[] rawBody, string? signature)
     {
-        using var h = HMACSHA256.Create();
-        var mac = h.ComputeHash(Encoding.UTF8.GetBytes(secret), rawBody);
-        // (overload used above computes keyed hash; do explicit for clarity)
         var expected = "sha256=" + Convert.ToHexString(
-            new HMACSHA256(Encoding.UTF8.GetBytes(secret)).ComputeHash(rawBody)).ToLowerInvariant();
+            HMACSHA256.HashData(Encoding.UTF8.GetBytes(secret), rawBody)).ToLowerInvariant();
         return FixedTimeEquals(expected, signature ?? "");
     }
 
